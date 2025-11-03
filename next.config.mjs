@@ -4,7 +4,7 @@ const nextConfig = {
     root: process.cwd(),
   },
   images: {
-    formats: [], // WebP dönüşümünü devre dışı bırak, orijinal formatı kullan
+    formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Cloudflare R2 için remote patterns
