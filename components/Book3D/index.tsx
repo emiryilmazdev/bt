@@ -85,6 +85,8 @@ export const Book3D = () => {
           width: '100%',
           height: '100%',
           cursor: 'pointer',
+          opacity: isVisible ? 1 : 0,
+          transition: 'opacity 0.8s ease-in-out',
         }}
         onClick={() => setIsZoomed(true)}
       >
@@ -93,6 +95,12 @@ export const Book3D = () => {
             shadows
             camera={{ position: cameraPosition, fov: 45 }}
             style={{ background: 'transparent', width: '100%', height: '100%' }}
+            gl={{ 
+              antialias: true,
+              alpha: true,
+              powerPreference: 'high-performance',
+            }}
+            dpr={[1, 2]} // Pixel ratio limiti - performans için
           >
             <group position-y={0}>
               <Suspense fallback={null}>

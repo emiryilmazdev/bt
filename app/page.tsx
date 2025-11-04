@@ -3,10 +3,8 @@ import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import VisionMissionSection from '@/components/VisionMissionSection';
-import SolutionsSection from '@/components/SolutionsSection';
-import StatsSection from '@/components/StatsSection';
-import ClientsSection from '@/components/ClientsSection';
+import SolutionsSection from '@/components/SolutionsSection-tabs'; // TABS Tasarım!
+
 import MobileMenu from '@/components/MobileMenu';
 import OffcanvasMenu from '@/components/OffcanvasMenu';
 import { Book3DSkeleton, MapSkeleton, FooterSkeleton } from '@/components/Skeletons';
@@ -34,28 +32,23 @@ export default function Home() {
         <div id="smooth-content">
           <main className="site-main" id="primary">
             <div className="space-for-header"></div>
-            
+
             {/* Critical content - loads immediately */}
             <HeroSection />
             <AboutSection />
-            <VisionMissionSection />
             <SolutionsSection />
-            
+
             {/* Heavy 3D content - lazy loaded with skeleton */}
             <Suspense fallback={<Book3DSkeleton />}>
               <CatalogSectionClient />
             </Suspense>
-            
-            <StatsSection />
-            
-            {/* Map - lazy loaded */}
+
+            {/* Global Impact: Stats + Map + Clients - lazy loaded */}
             <Suspense fallback={<MapSkeleton />}>
               <GlobalMapSection />
             </Suspense>
-            
-            <ClientsSection />
           </main>
-          
+
           {/* Footer - lazy loaded */}
           <Suspense fallback={<FooterSkeleton />}>
             <FooterSection />

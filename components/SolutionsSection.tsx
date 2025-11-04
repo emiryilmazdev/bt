@@ -1,20 +1,28 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const SolutionsSection: React.FC = () => {
   return (
-    <section id="solutions" className="tj-service-section-5 section-gap">
+    <section 
+      id="solutions" 
+      className="tj-service-section-5 section-gap-x"
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="sec-heading style-4 text-center">
-              <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                <i className="tji-box"></i>Çözümlerimiz
-              </span>
-              <h2 className="sec-title title-anim">
-                Endüstriyel Galvaniz Kaplama Teknolojileri
-              </h2>
-            </div>
+            <AnimatedSection delay={0.3}>
+              <div className="sec-heading style-4 text-center">
+                <span className="sub-title">
+                  <i className="tji-box"></i>Çözümlerimiz
+                </span>
+                <h2 className="sec-title">
+                  Endüstriyel Galvaniz Kaplama Teknolojileri
+                </h2>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
         <div className="row">

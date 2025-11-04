@@ -35,7 +35,7 @@ export default function AboutPage() {
                   }}>
                     Üretimin ötesinde
                   </h1>
-                  
+
                   <p style={{
                     fontSize: '24px',
                     lineHeight: '1.6',
@@ -139,7 +139,7 @@ export default function AboutPage() {
                   }}>
                     GP Galvano Proje olarak; yüzey işlem teknolojileri, otomatik kaplama tesisleri ve özel tasarım sistemlerde uzmanlaşarak, her müşterimize katma değer sağlayan projeler geliştiriyoruz.
                   </h2>
-                  
+
                   <div style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
@@ -166,7 +166,7 @@ export default function AboutPage() {
                         Teknoloji, inovasyon ve sürdürülebilirliği odağına alarak sanayiye değer katmak. Yüksek kalite standartlarında mühendislik çözümleri geliştirmek.
                       </p>
                     </div>
-                    
+
                     <div>
                       <h3 style={{
                         fontSize: '14px',
@@ -269,7 +269,7 @@ export default function AboutPage() {
                 }}>
                   Projeleriniz için hazırız
                 </h2>
-                
+
                 <a href="/contact" style={{
                   display: 'inline-block',
                   padding: '20px 50px',
@@ -282,14 +282,14 @@ export default function AboutPage() {
                   transition: 'all 0.3s ease',
                   letterSpacing: '0.5px'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#333';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#000';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}>
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#333';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = '#000';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}>
                   İletişime Geç
                 </a>
               </div>

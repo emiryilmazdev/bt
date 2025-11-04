@@ -1,27 +1,35 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const VisionMissionSection: React.FC = () => {
   return (
-    <section id="vision-mission" className="tj-service-section service-2 section-gap section-gap-x slidebar-stickiy-container" style={{ marginTop: '80px' }}>
+    <section 
+      id="vision-mission" 
+      className="tj-service-section service-2 section-gap-x slidebar-stickiy-container"
+    >
       <div className="container">
         <div className="row">
           
           {/* Left Column - Sticky Header */}
           <div className="col-lg-4">
             <div className="content-wrap slidebar-stickiy">
-              <div className="sec-heading style-2">
-                <span className="sub-title wow fadeInUp" data-wow-delay=".3s">Hizmetlerimiz</span>
-                <h2 className="sec-title text-white text-anim">
-                  Kaliteyle <span>Güven</span>, İnovasyon ile <span>Değer</span> Yaratıyoruz
-                </h2>
-              </div>
-              <div className="wow fadeInUp" data-wow-delay=".6s">
+              <AnimatedSection delay={0.3}>
+                <div className="sec-heading style-2">
+                  <span className="sub-title">Hizmetlerimiz</span>
+                  <h2 className="sec-title text-white">
+                    Kaliteyle <span>Güven</span>, İnovasyon ile <span>Değer</span> Yaratıyoruz
+                  </h2>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.6}>
                 <a className="tj-primary-btn" href="service.html">
                   <span className="btn-text"><span>Hizmetlerimizi Keşfedin</span></span>
                   <span className="btn-icon"><i className="tji-arrow-right-long"></i></span>
                 </a>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
 
@@ -30,7 +38,7 @@ const VisionMissionSection: React.FC = () => {
             <div className="service-wrapper-2">
               
               {/* Service 1 - Kaplama Teknolojisi */}
-              <div className="service-item-wrapper tj-fadein-right-on-scroll">
+              <AnimatedSection direction="right" className="service-item-wrapper">
                 <div className="service-item style-2">
                   <div className="title-area">
                     <div className="service-icon">
@@ -53,10 +61,10 @@ const VisionMissionSection: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
 
               {/* Service 2 - Vizyonumuz */}
-              <div className="service-item-wrapper tj-fadein-right-on-scroll">
+              <AnimatedSection direction="right" delay={0.1} className="service-item-wrapper">
                 <div className="service-item style-2">
                   <div className="title-area">
                     <div className="service-icon">
@@ -79,10 +87,10 @@ const VisionMissionSection: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
 
               {/* Service 3 - Misyonumuz */}
-              <div className="service-item-wrapper tj-fadein-right-on-scroll">
+              <AnimatedSection direction="right" delay={0.2} className="service-item-wrapper">
                 <div className="service-item style-2">
                   <div className="title-area">
                     <div className="service-icon">
@@ -105,10 +113,10 @@ const VisionMissionSection: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
 
               {/* Service 4 - Değerlerimiz & Taahhüdümüz */}
-              <div className="service-item-wrapper tj-fadein-right-on-scroll">
+              <AnimatedSection direction="right" delay={0.3} className="service-item-wrapper">
                 <div className="service-item style-2">
                   <div className="title-area">
                     <div className="service-icon">
@@ -131,7 +139,7 @@ const VisionMissionSection: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
 
             </div>
           </div>

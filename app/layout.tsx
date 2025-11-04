@@ -4,13 +4,10 @@ import "./globals.css";
 
 // CSS imports - Modern Next.js approach
 import "../styles/bootstrap.min.css";
-import "../styles/animate.css";
+import "../styles/animate.css"; // Framer Motion ile birlikte kullanılabilir
 import "../styles/bexon-icons.css";
-import "../styles/nice-select.css";
-import "../styles/swiper.css";
-import "../styles/venobox.css";
-import "../styles/odometer.css";
-import "../styles/meanmenu.css";
+import "../styles/swiper.css"; // Swiper için gerekli
+import "../styles/meanmenu.css"; // Mobile menu için gerekli
 import "../styles/theme.min.css";
 import "../styles/custom.css";
 
@@ -46,26 +43,27 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <div className="body-overlay"></div>
         {children}
-        
-        {/* JS scripts in original order from index.html */}
+
+        {/* Essential JS scripts */}
         <Script src="/js/smooth-scroll.js" strategy="afterInteractive" />
         <Script src="/js/menu-smooth-scroll.js" strategy="afterInteractive" />
         <Script src="/js/jquery.min.js" strategy="afterInteractive" />
         <Script src="/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
+
+        {/* GSAP for smooth scrolling */}
         <Script src="/js/gsap.min.js" strategy="afterInteractive" />
         <Script src="/js/scroll-smoother.min.js" strategy="afterInteractive" />
         <Script src="/js/scroll-to-plugin.min.js" strategy="afterInteractive" />
         <Script src="/js/scroll-trigger.min.js" strategy="afterInteractive" />
-        <Script src="/js/gsap-splittext.min.js" strategy="afterInteractive" />
-        <Script src="/js/jquery.nice-select.min.js" strategy="afterInteractive" />
+
+        {/* Swiper for sliders */}
         <Script src="/js/swiper.min.js" strategy="afterInteractive" />
-        <Script src="/js/odometer.min.js" strategy="afterInteractive" />
-        <Script src="/js/venobox.min.js" strategy="afterInteractive" />
-        <Script src="/js/jquery.appear.min.js" strategy="afterInteractive" />
-        <Script src="/js/wow.min.js" strategy="afterInteractive" />
+
+        {/* Mobile menu */}
         <Script src="/js/jquery.meanmenu.min.js" strategy="afterInteractive" />
+
+        {/* Theme initialization */}
         <Script src="/js/theme-main.js" strategy="afterInteractive" />
-        <Script src="/js/counter-animation.js" strategy="afterInteractive" />
       </body>
     </html>
   );

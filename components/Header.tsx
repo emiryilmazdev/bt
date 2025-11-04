@@ -65,8 +65,8 @@ const Header: React.FC = () => {
                       <li className={pathname === '/about' ? 'current-menu-ancestor' : ''}>
                         <a href="/about" style={{ color: pathname === '/about' ? '#E9562D' : undefined }}>Şirketimiz</a>
                       </li>
-                      <li className={pathname === '/projects' ? 'current-menu-ancestor' : ''}>
-                        <a href="/projects" style={{ color: pathname === '/projects' ? '#E9562D' : undefined }}>Projelerimiz</a>
+                      <li>
+                        <a href="/#solutions" onClick={(e) => handleSmoothScroll(e, 'solutions')}>Projelerimiz</a>
                       </li>
                       <li>
                         <a href="/#clients" onClick={(e) => handleSmoothScroll(e, 'clients')}>Referanslarımız</a>
@@ -132,8 +132,8 @@ const Header: React.FC = () => {
                       <li className={pathname === '/about' ? 'current-menu-ancestor' : ''}>
                         <a href="/about" style={{ color: pathname === '/about' ? '#E9562D' : undefined }}>Şirketimiz</a>
                       </li>
-                      <li className={pathname === '/projects' ? 'current-menu-ancestor' : ''}>
-                        <a href="/projects" style={{ color: pathname === '/projects' ? '#E9562D' : undefined }}>Projelerimiz</a>
+                      <li>
+                        <a href="/#solutions" onClick={(e) => handleSmoothScroll(e, 'solutions')}>Projelerimiz</a>
                       </li>
                       <li>
                         <a href="/#clients" onClick={(e) => handleSmoothScroll(e, 'clients')}>Referanslarımız</a>

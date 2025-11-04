@@ -2,23 +2,29 @@
 
 import React from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const HeroSection: React.FC = () => {
 
   return (
-    <section id="hero" className="tj-banner-section section-gap-x">
+    <section id="hero" className="tj-banner-section section-gap-x" style={{ paddingTop: '15px' }}>
       <div className="banner-area">
 
         {/* Left Box - Content */}
         <div className="banner-left-box">
           <div className="banner-content">
-            <span className="sub-title wow fadeInDown" data-wow-delay=".2s">
-              <i className="tji-excellence"></i> 25 YILLIK DENEYİM
-            </span>
-            <h1 className="banner-title title-anim">
-              GalvaNorm'a <span>Hoş Geldiniz</span>
-            </h1>
-            <div className="banner-desc-area wow fadeInUp" data-wow-delay=".7s">
+            <AnimatedSection direction="down" delay={0.2}>
+              <span className="sub-title">
+                <i className="tji-excellence"></i> 25 YILLIK DENEYİM
+              </span>
+            </AnimatedSection>
+            <AnimatedSection delay={0.4}>
+              <h1 className="banner-title">
+                GalvaNorm'a <span>Hoş Geldiniz</span>
+              </h1>
+            </AnimatedSection>
+            <AnimatedSection delay={0.7}>
+              <div className="banner-desc-area">
               <a className="banner-link" href="about.html">
                 <span style={{
                   display: 'inline-block',
@@ -40,7 +46,8 @@ const HeroSection: React.FC = () => {
               <div className="banner-desc">
                 GalvaNorm'a hoş geldiniz. Endüstriyel kaplama teknolojilerinde yüksek kaliteyi, enerji verimliliğini ve sürdürülebilirliği bir araya getiriyoruz. Son teknoloji yarı ve tam otomatik kaplama tesislerimizle süreçlerinizi optimize ediyor, maliyetlerinizi en aza indiriyoruz.
               </div>
-            </div>
+              </div>
+            </AnimatedSection>
           </div>
           <div className="banner-shape">
             <Image

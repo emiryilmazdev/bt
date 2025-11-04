@@ -1,14 +1,17 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const ClientsSection: React.FC = () => {
   return (
-    <section 
-      id="clients" 
-      className="tj-client-section client-section-gap wow fadeInUp" 
-      data-wow-delay=".4s" 
-      style={{ marginTop: '80px', marginBottom: '80px' }}
-    >
+    <AnimatedSection delay={0.4}>
+      <section 
+        id="clients" 
+        className="tj-client-section client-section-gap" 
+        style={{ marginTop: '80px', marginBottom: '80px' }}
+      >
       <div className="container-fluid client-container">
         <div className="row">
           <div className="col-12">
@@ -98,7 +101,8 @@ const ClientsSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </AnimatedSection>
   );
 };
 

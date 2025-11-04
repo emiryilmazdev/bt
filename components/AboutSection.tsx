@@ -31,13 +31,11 @@ const AboutSection: React.FC = () => {
           overflow: hidden;
           background: #000;
           min-height: 700px;
-          margin-top: 80px;
         }
         
         @media (max-width: 991px) {
           .about-section-responsive {
             min-height: 700px;
-            margin-top: 60px;
           }
           .about-content-wrapper {
             left: 40px !important;
@@ -72,7 +70,6 @@ const AboutSection: React.FC = () => {
         @media (max-width: 767px) {
           .about-section-responsive {
             min-height: 650px;
-            margin-top: 40px;
           }
           .about-content-wrapper {
             left: 20px !important;

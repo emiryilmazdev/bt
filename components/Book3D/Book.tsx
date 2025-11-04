@@ -35,7 +35,7 @@ const turningCurveStrength = 0.09;
 const PAGE_WIDTH = 1.28;
 const PAGE_HEIGHT = 1.71;
 const PAGE_DEPTH = 0.003;
-const PAGE_SEGMENTS = 30;
+const PAGE_SEGMENTS = 20; // 30'dan 20'ye düşürdük - %33 daha az polygon
 const SEGMENT_WIDTH = PAGE_WIDTH / PAGE_SEGMENTS;
 
 const pageGeometry = new BoxGeometry(
